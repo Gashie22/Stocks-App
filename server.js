@@ -33,13 +33,14 @@ app.use(morgan("dev"))
 //cors policy
 app.use(cors({ 
     credentials: true,
-    origin: "http://localhost:3001"}));
+    origin: "http://localhost:3000"}));
 //userRoute 
 dotenv.config(); 
 //db config
 connectDB()
 app.use('/api',require('./routes/productRouter.js'));//url = /users/register
 app.use('/api',require('./routes/userRoute.js'));//url = /users/register
+app.use('/api',require('./routes/clientsRouter.js'));//url = /users/register
 
 
 
