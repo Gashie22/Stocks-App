@@ -31,6 +31,7 @@ app.use(bodyParser.json())
 app.use(morgan("dev"))
 
 //cors policy
+//initial commit changed
 app.use(cors({ 
     credentials: true,
     origin: "http://localhost:3000"}));
